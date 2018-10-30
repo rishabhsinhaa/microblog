@@ -1,13 +1,96 @@
-2018-10-08 22:15:28,507 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-08 22:15:44,637 ERROR: Exception on /edit_profile [POST] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+2018-10-30 11:05:12,111 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
-    context)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 509, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: post() missing 1 required positional argument: 'username'
+2018-10-30 11:07:40,762 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: post() missing 1 required positional argument: 'username'
+2018-10-30 11:10:54,136 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:11:09,995 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:11:12,807 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 84, in post
+    post=post.query.filter_by(title=postname).first_or_404()
+UnboundLocalError: local variable 'post' referenced before assignment
+2018-10-30 11:11:30,168 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:11:35,135 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 84, in post
+    post=post.query.filter_by(title=postname).first_or_404()
+UnboundLocalError: local variable 'post' referenced before assignment
+2018-10-30 11:12:32,178 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:12:35,360 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 84, in post
+    post=post.query.filter_by(title=postname).first_or_404()
+UnboundLocalError: local variable 'post' referenced before assignment
+2018-10-30 11:13:21,607 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:13:24,434 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\base.py", line 379, in _entity_descriptor
+    return getattr(entity, key)
+AttributeError: type object 'User' has no attribute 'user_id'
 
-The above exception was the direct cause of the following exception:
+During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
@@ -22,61 +105,17 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 86, in edit_profile
-    db.session.commit()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 153, in do
-    return getattr(self.registry(), name)(*args, **kwargs)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 943, in commit
-    self.transaction.commit()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 467, in commit
-    self._prepare_impl()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 447, in _prepare_impl
-    self.session.flush()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2254, in flush
-    self._flush(objects)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2380, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 249, in reraise
-    raise value
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2344, in _flush
-    flush_context.execute()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 391, in execute
-    rec.execute(self)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 556, in execute
-    uow
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 177, in save_obj
-    mapper, table, update)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 768, in _emit_update_statements
-    execute(statement, multiparams)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 948, in execute
-    return meth(self, multiparams, params)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 269, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1060, in _execute_clauseelement
-    compiled_sql, distilled_params
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1200, in _execute_context
-    context)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1413, in _handle_dbapi_exception
-    exc_info
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 265, in raise_from_cause
-    reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 248, in reraise
-    raise value.with_traceback(tb)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
-    context)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 509, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username [SQL: 'UPDATE user SET username=?, about_me=? WHERE user.id = ?'] [parameters: ('www', 'qwqweqw', 2)] (Background on this error at: http://sqlalche.me/e/gkpj)
-2018-10-08 22:19:19,808 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-09 16:34:00,622 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-09 16:34:12,604 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-09 16:34:26,697 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-09 16:49:50,745 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-09 16:50:10,409 ERROR: Exception on /user/susan [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 86, in post
+    user=User.query.filter_by(user_id=userid).first_or_404()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1689, in filter_by
+    for key, value in kwargs.items()]
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1689, in <listcomp>
+    for key, value in kwargs.items()]
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\base.py", line 383, in _entity_descriptor
+    (description, key)
+sqlalchemy.exc.InvalidRequestError: Entity '<class 'app.models.User'>' has no property 'user_id'
+2018-10-30 11:14:04,233 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:14:06,326 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -90,38 +129,6 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 70, in user
-    return render_template('user.html', user=user, posts=posts)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\Rishabh\proj\microblog\app\templates\user.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\Rishabh\proj\microblog\app\templates\base.html", line 30, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\Rishabh\proj\microblog\app\templates\user.html", line 20, in block "content"
-    {% include '_post.html' %}
-  File "C:\Users\Rishabh\proj\microblog\app\templates\_post.html", line 4, in top-level template code
-    <td>{{ post.author.username }} says:<br><a href="{{ url_for('post',post.title)}}" >post.title</td>
-TypeError: url_for() takes 1 positional argument but 2 were given
-2018-10-09 16:51:05,928 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-09 16:51:43,644 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-09 17:05:55,604 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-09 17:09:55,400 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-09 17:12:26,171 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-09 17:14:42,127 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-09 17:14:57,998 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-09 17:19:39,323 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-09 17:22:22,785 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-24 08:20:00,648 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 87, in post
+    return render_template('_comment.html',post=post.items,user=user)
+AttributeError: 'Post' object has no attribute 'items'

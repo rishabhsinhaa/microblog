@@ -1,109 +1,4 @@
-2018-10-24 10:11:34,924 ERROR: Exception on /user/qwerty [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
-    rv = self.preprocess_request()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2087, in preprocess_request
-    rv = func()
-  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 71, in before_request
-    if current_user.is_authenticated:
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\werkzeug\local.py", line 306, in _get_current_object
-    return self.__local()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_login\utils.py", line 26, in <lambda>
-    current_user = LocalProxy(lambda: _get_user())
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_login\utils.py", line 335, in _get_user
-    current_app.login_manager._load_user()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_login\login_manager.py", line 359, in _load_user
-    return self.reload_user()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_login\login_manager.py", line 321, in reload_user
-    user = self.user_callback(user_id)
-  File "C:\Users\Rishabh\proj\microblog\app\models.py", line 66, in load_user
-    return User.query.get(int(id))
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 512, in __get__
-    mapper = orm.class_mapper(type)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\base.py", line 421, in class_mapper
-    mapper = _inspect_mapped_class(class_, configure=configure)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\base.py", line 400, in _inspect_mapped_class
-    mapper._configure_all()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 1276, in _configure_all
-    configure_mappers()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 3033, in configure_mappers
-    mapper._post_configure_properties()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 1832, in _post_configure_properties
-    prop.init()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\interfaces.py", line 183, in init
-    self.do_init()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 1659, in do_init
-    self._generate_backref()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 1849, in _generate_backref
-    (backref_key, self, m))
-sqlalchemy.exc.ArgumentError: Error creating backref 'author' on relationship 'User.posts': property of that name exists on mapper 'Mapper|Post|post'
-2018-10-24 10:11:38,735 ERROR: Exception on /index [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
-    rv = self.preprocess_request()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2087, in preprocess_request
-    rv = func()
-  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 71, in before_request
-    if current_user.is_authenticated:
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\werkzeug\local.py", line 306, in _get_current_object
-    return self.__local()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_login\utils.py", line 26, in <lambda>
-    current_user = LocalProxy(lambda: _get_user())
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_login\utils.py", line 335, in _get_user
-    current_app.login_manager._load_user()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_login\login_manager.py", line 359, in _load_user
-    return self.reload_user()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_login\login_manager.py", line 321, in reload_user
-    user = self.user_callback(user_id)
-  File "C:\Users\Rishabh\proj\microblog\app\models.py", line 66, in load_user
-    return User.query.get(int(id))
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 512, in __get__
-    mapper = orm.class_mapper(type)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\base.py", line 421, in class_mapper
-    mapper = _inspect_mapped_class(class_, configure=configure)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\base.py", line 400, in _inspect_mapped_class
-    mapper._configure_all()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 1276, in _configure_all
-    configure_mappers()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 3030, in configure_mappers
-    raise e
-sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper|User|user'. Original exception was: Error creating backref 'author' on relationship 'User.posts': property of that name exists on mapper 'Mapper|Post|post'
-2018-10-24 10:12:26,155 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-24 23:05:40,640 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
-2018-10-25 14:13:51,054 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-25 14:14:22,697 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-25 14:16:34,565 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-25 14:16:44,486 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-29 19:46:35,888 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-29 19:46:41,454 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-29 19:46:48,714 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-29 19:46:56,648 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 10:34:22,557 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 10:39:23,762 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 10:48:17,124 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 10:48:56,543 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 11:04:30,952 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 11:04:35,686 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+2018-10-30 21:03:21,740 ERROR: Exception on /post/asdada [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -117,7 +12,124 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 83, in post
-    assdas
-NameError: name 'assdas' is not defined
-2018-10-30 11:05:07,143 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 94, in post
+    return render_template('_comment.html',post=post,user=user,form=form,comments=comments)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\base.html", line 48, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 18, in block "app_content"
+    {% for comment in comments %}
+TypeError: 'Comment' object is not iterable
+2018-10-30 21:03:22,334 ERROR: Exception on /post/asdada [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 94, in post
+    return render_template('_comment.html',post=post,user=user,form=form,comments=comments)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\base.html", line 48, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 18, in block "app_content"
+    {% for comment in comments %}
+TypeError: 'Comment' object is not iterable
+2018-10-30 21:03:22,755 ERROR: Exception on /post/asdada [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 94, in post
+    return render_template('_comment.html',post=post,user=user,form=form,comments=comments)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\base.html", line 48, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 18, in block "app_content"
+    {% for comment in comments %}
+TypeError: 'Comment' object is not iterable

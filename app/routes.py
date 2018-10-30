@@ -1,8 +1,8 @@
 from flask import render_template,flash,redirect,request,url_for
 from app import app,db
-from app.forms import LoginForm,RegistrationForm,EditProfileForm,PostForm
+from app.forms import LoginForm,RegistrationForm,EditProfileForm,PostForm,CommentForm
 from flask_login import current_user, login_user,logout_user,login_required
-from app.models import User,Post
+from app.models import User,Post,Comment
 from werkzeug.urls import url_parse
 from datetime import datetime
 
@@ -78,13 +78,20 @@ def user(username):
     return render_template('user.html', user=user, posts=posts.items,
                            next_url=next_url, prev_url=prev_url)
 
-@app.route('/post/<postname>')
+@app.route('/post/<postname>',methods=['GET','POST'])
 def post(postname):
-    page=request.args.get('page',1,type=int)
+    form=CommentForm()
     post=Post.query.filter_by(title=postname).first_or_404()
+    if form.validate_on_submit():
+        comment=Comment(user=current_user.username,post_id=post.id,body=form.comment.data)
+        db.session.add(comment)
+        db.session.commit()
+    postid=post.id
+    page=request.args.get('page',1,type=int)
+    comments=Comment.query.filter_by(post_id=postid).all()
     userid=post.user_id
     user=User.query.filter_by(id=userid).first_or_404()
-    return render_template('_comment.html',post=post,user=user)
+    return render_template('_comment.html',post=post,user=user,form=form,comments=comments)
 
 @app.before_request
 def before_request():
