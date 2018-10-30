@@ -1,0 +1,67 @@
+2018-10-30 11:14:09,028 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 87, in post
+    return render_template('_comment.html',post=post.items,user=user)
+AttributeError: 'Post' object has no attribute 'items'
+2018-10-30 11:15:19,520 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:16:53,671 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:17:23,039 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:18:50,769 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:18:52,112 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 87, in post
+    return render_template('_comment.html',post=post,user=user)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 9, in block "content"
+    <p>{{suer.username}}</p></td>
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'suer' is undefined
+2018-10-30 11:19:18,858 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]

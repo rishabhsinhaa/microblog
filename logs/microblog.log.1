@@ -1,0 +1,134 @@
+2018-10-30 11:05:12,111 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: post() missing 1 required positional argument: 'username'
+2018-10-30 11:07:40,762 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: post() missing 1 required positional argument: 'username'
+2018-10-30 11:10:54,136 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:11:09,995 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:11:12,807 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 84, in post
+    post=post.query.filter_by(title=postname).first_or_404()
+UnboundLocalError: local variable 'post' referenced before assignment
+2018-10-30 11:11:30,168 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:11:35,135 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 84, in post
+    post=post.query.filter_by(title=postname).first_or_404()
+UnboundLocalError: local variable 'post' referenced before assignment
+2018-10-30 11:12:32,178 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:12:35,360 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 84, in post
+    post=post.query.filter_by(title=postname).first_or_404()
+UnboundLocalError: local variable 'post' referenced before assignment
+2018-10-30 11:13:21,607 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:13:24,434 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\base.py", line 379, in _entity_descriptor
+    return getattr(entity, key)
+AttributeError: type object 'User' has no attribute 'user_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 86, in post
+    user=User.query.filter_by(user_id=userid).first_or_404()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1689, in filter_by
+    for key, value in kwargs.items()]
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1689, in <listcomp>
+    for key, value in kwargs.items()]
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\sqlalchemy\orm\base.py", line 383, in _entity_descriptor
+    (description, key)
+sqlalchemy.exc.InvalidRequestError: Entity '<class 'app.models.User'>' has no property 'user_id'
+2018-10-30 11:14:04,233 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 11:14:06,326 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 87, in post
+    return render_template('_comment.html',post=post.items,user=user)
+AttributeError: 'Post' object has no attribute 'items'
