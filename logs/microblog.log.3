@@ -1,23 +1,4 @@
-2018-10-30 20:58:29,329 ERROR: Exception on /post/asdada [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 89, in post
-    postid=post.first().id
-AttributeError: 'Post' object has no attribute 'first'
-2018-10-30 20:58:55,867 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 21:02:39,576 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 21:02:48,027 ERROR: Exception on /post/asdada [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+2018-10-30 21:03:21,740 ERROR: Exception on /post/asdada [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -62,7 +43,52 @@ Traceback (most recent call last):
   File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 18, in block "app_content"
     {% for comment in comments %}
 TypeError: 'Comment' object is not iterable
-2018-10-30 21:03:21,099 ERROR: Exception on /post/asdada [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+2018-10-30 21:03:22,334 ERROR: Exception on /post/asdada [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 94, in post
+    return render_template('_comment.html',post=post,user=user,form=form,comments=comments)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\base.html", line 48, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 18, in block "app_content"
+    {% for comment in comments %}
+TypeError: 'Comment' object is not iterable
+2018-10-30 21:03:22,755 ERROR: Exception on /post/asdada [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()

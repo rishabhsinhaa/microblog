@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: d82bb880c062
+Revision ID: 48d20d556a01
 Revises: 
-Create Date: 2018-10-30 20:15:00.938819
+Create Date: 2018-11-02 20:58:21.441273
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'd82bb880c062'
+revision = '48d20d556a01'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -47,10 +47,12 @@ def upgrade():
     op.create_index(op.f('ix_post_timestamp'), 'post', ['timestamp'], unique=False)
     op.create_table('comment',
     sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('email', sa.String(length=64), nullable=True),
     sa.Column('user', sa.String(length=64), nullable=True),
     sa.Column('post_id', sa.Integer(), nullable=True),
     sa.Column('body', sa.String(length=150), nullable=True),
     sa.Column('timestamp', sa.DateTime(), nullable=True),
+    sa.ForeignKeyConstraint(['email'], ['user.email'], ),
     sa.ForeignKeyConstraint(['post_id'], ['post.id'], ),
     sa.ForeignKeyConstraint(['user'], ['user.username'], ),
     sa.PrimaryKeyConstraint('id')

@@ -83,7 +83,7 @@ def post(postname):
     form=CommentForm()
     post=Post.query.filter_by(title=postname).first_or_404()
     if form.validate_on_submit():
-        comment=Comment(user=current_user.username,post_id=post.id,body=form.comment.data)
+        comment=Comment(user=current_user.username,email=current_user.email,post_id=post.id,body=form.comment.data)
         db.session.add(comment)
         db.session.commit()
     postid=post.id
@@ -146,7 +146,6 @@ def unfollow(username):
     return redirect(url_for('user', username=username))
     
 @app.route('/explore')
-@login_required
 def explore():
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.timestamp.desc()).paginate(

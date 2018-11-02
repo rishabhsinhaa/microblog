@@ -1,4 +1,4 @@
-2018-10-24 08:20:09,568 ERROR: Exception on / [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+2018-10-24 08:20:52,799 ERROR: Exception on /index [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -37,7 +37,7 @@ Traceback (most recent call last):
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-10-24 08:20:13,067 ERROR: Exception on /index [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+2018-10-24 08:21:14,399 ERROR: Exception on /index [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -76,42 +76,21 @@ Traceback (most recent call last):
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-10-24 08:20:46,642 ERROR: Exception on /index [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 24, in index
-    return render_template('index.html', title='Home', posts=posts)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\Rishabh\proj\microblog\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\Rishabh\proj\microblog\app\templates\base.html", line 30, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\Rishabh\proj\microblog\app\templates\index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
+2018-10-24 08:24:22,962 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 08:34:42,821 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 08:35:16,336 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 08:40:18,713 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 08:44:01,038 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 08:44:29,766 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 08:50:18,346 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 08:50:21,039 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 08:50:29,021 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 08:52:33,242 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 08:52:37,667 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 08:52:44,583 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 08:56:05,971 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 09:49:36,462 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 10:00:57,327 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 10:04:47,614 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 10:06:59,481 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]
+2018-10-24 10:11:25,535 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:42]

@@ -10,11 +10,14 @@
 			<p>{{user.username}}</p></td>
 	</tr>
 </table>
+{% if current_user.is_anonymous%}
+{%else%}
 {% if form %}
     {{ wtf.quick_form(form) }}
     <br>
     {% endif %}
-
+    {%endif%}
+    <br>
     {% for comment in comments %}
         {% include 'comments.html' %}
     {% endfor %}

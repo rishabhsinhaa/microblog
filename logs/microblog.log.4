@@ -1,4 +1,4 @@
-2018-10-30 11:14:09,028 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+2018-10-30 20:58:29,329 ERROR: Exception on /post/asdada [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,14 +12,12 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 87, in post
-    return render_template('_comment.html',post=post.items,user=user)
-AttributeError: 'Post' object has no attribute 'items'
-2018-10-30 11:15:19,520 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 11:16:53,671 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 11:17:23,039 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 11:18:50,769 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 11:18:52,112 ERROR: Exception on /post/sadas [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 89, in post
+    postid=post.first().id
+AttributeError: 'Post' object has no attribute 'first'
+2018-10-30 20:58:55,867 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 21:02:39,576 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+2018-10-30 21:02:48,027 ERROR: Exception on /post/asdada [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
 Traceback (most recent call last):
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -33,8 +31,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 87, in post
-    return render_template('_comment.html',post=post,user=user)
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 94, in post
+    return render_template('_comment.html',post=post,user=user,form=form,comments=comments)
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
     context, ctx.app)
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
@@ -47,8 +45,8 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 1, in top-level template code
-    {% extends "base.html" %}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
   File "C:\Users\Rishabh\proj\microblog\app\templates\base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
@@ -59,51 +57,53 @@ Traceback (most recent call last):
     {% block body -%}
   File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
     {% block content -%}
-  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 9, in block "content"
-    <p>{{suer.username}}</p></td>
-  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'suer' is undefined
-2018-10-30 11:19:18,858 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:33:32,078 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:34:25,843 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:36:16,501 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:36:23,764 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:41:29,490 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:43:18,541 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:49:18,165 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:49:23,820 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:49:42,065 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:49:46,420 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:49:51,497 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:50:01,587 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:50:35,291 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:50:40,165 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:50:43,023 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:50:47,717 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:51:07,790 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:51:12,523 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:51:17,956 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:52:24,694 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:52:29,469 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:52:34,624 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:56:04,414 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:56:44,647 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:58:05,513 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:59:03,110 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 19:59:17,272 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 20:00:20,699 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 20:01:00,915 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 20:20:51,366 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 20:29:58,747 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 20:31:40,861 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 20:38:12,226 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 20:38:38,729 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 20:39:04,233 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 20:39:42,037 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 20:41:10,556 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 20:41:58,133 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 20:42:11,260 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 20:42:29,562 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 20:42:43,731 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
-2018-10-30 20:58:21,148 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:44]
+  File "C:\Users\Rishabh\proj\microblog\app\templates\base.html", line 48, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 18, in block "app_content"
+    {% for comment in comments %}
+TypeError: 'Comment' object is not iterable
+2018-10-30 21:03:21,099 ERROR: Exception on /post/asdada [GET] [in c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 94, in post
+    return render_template('_comment.html',post=post,user=user,form=form,comments=comments)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\rishabh\proj\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\base.html", line 48, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Users\Rishabh\proj\microblog\app\templates\_comment.html", line 18, in block "app_content"
+    {% for comment in comments %}
+TypeError: 'Comment' object is not iterable
