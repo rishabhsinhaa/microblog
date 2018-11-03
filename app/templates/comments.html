@@ -12,7 +12,7 @@
             	{{comment.body}}
             	<br>
             	<p align="right">
-            	{{comment.timestamp}}</p>
+            	{{ moment(comment.timestamp).format('LLL') }}</p>
             </td>
 	</tr>
 </table>

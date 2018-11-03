@@ -91,3 +91,5 @@ Traceback (most recent call last):
   File "C:\Users\Rishabh\proj\microblog\app\routes.py", line 86, in post
     comment=Comment(email=current_user.email,user=cuurent_user.username,post_id=post.id,body=form.comment.data)
 NameError: name 'cuurent_user' is not defined
+2018-11-03 02:17:12,900 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:46]
+2018-11-03 09:07:43,904 INFO: Microblog startup [in C:\Users\Rishabh\proj\microblog\app\__init__.py:46]

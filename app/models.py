@@ -66,7 +66,7 @@ class Comment(db.Model):
     user=db.Column(db.String(64),db.ForeignKey('user.username'))
     post_id=db.Column(db.Integer,db.ForeignKey('post.id'))
     body=db.Column(db.String(150))
-    timestamp=db.Column(db.DateTime,index=True,default=datetime.now)
+    timestamp=db.Column(db.DateTime,index=True,default=datetime.utcnow)
     def __repr__(self):
         return '<Comment {}>'.format(self.body)
     def avatar(self, size):
